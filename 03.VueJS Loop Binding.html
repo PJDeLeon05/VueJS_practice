@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<htm>
+  <head>
+    <title>VueJS Loop Binding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id="vueJS-Loop">
+      <h2>Weekly Task for myself</h2>
+      <ul>
+        <li v-for="task in todoList">
+          {{ task.text }}
+        </li>
+      </ul>
+    </div>
+    <script>
+      var loopObj = new Vue({
+        el: "#vueJS-Loop",
+        data: {
+          todoList: [
+            {text: 'Maglilinis ng Kwarto.'},
+            {text: 'Paliguan ang mga Aso'},
+            {text: 'Design ng Electronic  Circuit for Attendance System'},
+            {text: 'Mag print ng Employee IDs'},
+            {text: 'Software Development'}
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>>
