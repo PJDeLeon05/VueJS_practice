@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice 01</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body class="bodyClass">
+    <div id="main-div">
+      <h1>There should be a text below me.</h1>
+      <h3>{{ main_message }}</h3>
+    </div>
+    <div id="sub-div1">
+      <h4>{{ secondary_message }}</h4>
+    </div>
+    <script>
+      var mainObj = new Vue({
+        el: "#main-div",
+        data: {main_message: 'Testing the Vue JS 01. This is inside a div with id "main-div"'}
+      });
+
+      var subObj = new Vue({
+        el: "#sub-div1",
+        data: {secondary_message: 'This should be Inside a div with id "sub-div1"'}
+      });
+    </script>
+  </body>
+</html>
