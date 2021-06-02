@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice 02. VueJS Two-Way Binding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+
+  <body>
+    <h1 style="text-align:center;">Type Copier</h1>
+    <div id="whereMagicHappens">
+      <p>{{ contentJuice }}</p>
+      <p><input v-model="contentJuice"></p>
+    </div>
+    <script>
+      var typeObj = new Vue({
+        el: '#whereMagicHappens',
+        data: { contentJuice: 'Type Anything Here'}
+      });
+    </script>
+  </body>
+</html>
