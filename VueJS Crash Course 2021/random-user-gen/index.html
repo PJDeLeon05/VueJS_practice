@@ -8,7 +8,10 @@
   </head>
   <body>
     <div id="app">
-      <h1>Hello there, {{ firstName}}.</h1>
+      <img :src="picture" :alt="`${firstName} ${lastName}`" :class="gender">
+      <h1>{{ firstName }}<br>{{ lastName }}</h1>
+      <h4>{{ email }}</h4>
+      <button v-on:click="getUserInfo()" :class="gender">Get Random User</button>
     </div>
 
     <script src="https://unpkg.com/vue@3.0.5"></script>
