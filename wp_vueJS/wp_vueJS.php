@@ -94,3 +94,16 @@ if ( !function_exists( 'addViaSC_vueJS' ) ) {
 }
 
 add_shortcode( 'wp_vueJS', 'addViaSC_vueJS' );
+
+
+//Adding Page Template with Vue JS
+if ( function_exists( 'vueJS_pageTemplate' ) ) {
+  function vueJS_pageTemplate( $page_template ) {
+    if ( is_page( 'vue-js' ) && get_permalink() == home_url() . '/vue-js/') {
+      $page_template = plugin_dir_path( __FILE__ ) . '/vueJS-pageTemplate.php';
+    }
+    return $page_template;
+  }
+}
+
+add_filter( 'page_template', 'vueJS_pageTemplate' );
